@@ -10,17 +10,17 @@ end
 
 require 'digest'
 
-puts 'Введите слово или фразу для шифрования:'
+puts 'Enter word or phrase for encrypting:'
 string = STDIN.gets.chomp
 
 encrypt_method = ''
 
 until([1,2].include?(encrypt_method)) do
-  puts "\nКаким способом зашифровать:\n1. MD5\n2. SHA1"
+  puts "\nWith which method to encrypt the data:\n1. MD5\n2. SHA1"
   encrypt_method = STDIN.gets.chomp.to_i
 end
 
-puts "Вот что получилось:"
+puts "Here we get the result:"
 
 case encrypt_method
   when 1
